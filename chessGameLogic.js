@@ -13,7 +13,9 @@ let started = false;
 let pauseGame = false;
 let promotionPiece;
 
-let newBoard2 = [
+
+//Basic Game Board Board
+let newBoard = [
   [[2, "R"], [2, "N"], [2, "B"], [2, "Q"], [2, "K"], [2, "B"], [2, "N"], [2, "R"]],
   [[2, "P"], [2, "P"], [2, "P"], [2, "P"], [2, "P"], [2, "P"], [2, "P"], [2, "P"]],
   [[0, "0"], [0, "0"], [0, "0"], [0, "0"], [0, "0"], [0, "0"], [0, "0"], [0, "0"]],
@@ -24,7 +26,8 @@ let newBoard2 = [
   [[1, "R"], [1, "N"], [1, "B"], [1, "Q"], [1, "K"], [1, "B"], [1, "N"], [1, "R"]],
 ];
 
-let newBoard = [
+//Test Board Checking Promoting Functionality
+let newBoard2 = [
   [[2, "R"], [2, "N"], [2, "B"], [0, "0"], [2, "K"], [2, "B"], [2, "N"], [2, "R"]],
   [[2, "P"], [2, "P"], [2, "P"], [1, "P"], [2, "P"], [2, "P"], [2, "P"], [2, "P"]],
   [[0, "0"], [0, "0"], [0, "0"], [0, "0"], [0, "0"], [0, "0"], [0, "0"], [0, "0"]],
@@ -113,7 +116,10 @@ function validMoves(piece, team, row, col) {
         if (tempRow <= 7 && tempRow >= 0 && tempCol <= 7 && tempCol >= 0) {
           if (board[tempRow][tempCol][0] === 0) {
             validSpots.push([tempRow, tempCol]);
-          } else if (board[tempRow][tempCol][0] === 2) {
+          } else if (board[tempRow][tempCol][0] === 2 && team === "1") {
+            validSpots.push([tempRow, tempCol]);
+            stopped = true;
+          } else if (board[tempRow][tempCol][0] === 1 && team === "2") {
             validSpots.push([tempRow, tempCol]);
             stopped = true;
           } else {
@@ -136,7 +142,10 @@ function validMoves(piece, team, row, col) {
         if (tempRow <= 7 && tempRow >= 0 && tempCol <= 7 && tempCol >= 0) {
           if (board[tempRow][tempCol][0] === 0) {
             validSpots.push([tempRow, tempCol]);
-          } else if (board[tempRow][tempCol][0] === 2) {
+          } else if (board[tempRow][tempCol][0] === 2 && team === "1") {
+            validSpots.push([tempRow, tempCol]);
+            stopped = true;
+          } else if (board[tempRow][tempCol][0] === 1 && team === "2") {
             validSpots.push([tempRow, tempCol]);
             stopped = true;
           } else {
@@ -159,7 +168,10 @@ function validMoves(piece, team, row, col) {
         if (tempRow <= 7 && tempRow >= 0 && tempCol <= 7 && tempCol >= 0) {
           if (board[tempRow][tempCol][0] === 0) {
             validSpots.push([tempRow, tempCol]);
-          } else if (board[tempRow][tempCol][0] === 2) {
+          } else if (board[tempRow][tempCol][0] === 2 && team === "1") {
+            validSpots.push([tempRow, tempCol]);
+            stopped = true;
+          } else if (board[tempRow][tempCol][0] === 1 && team === "2") {
             validSpots.push([tempRow, tempCol]);
             stopped = true;
           } else {
@@ -176,7 +188,9 @@ function validMoves(piece, team, row, col) {
       let tempCol = col + dr[1];
       let tempRow = row + dr[0];
       if (tempRow <= 7 && tempRow >= 0 && tempCol <= 7 && tempCol >= 0) {
-        if (board[tempRow][tempCol][0] === 0 || board[tempRow][tempCol][0] === 2) {
+        if (team === "1" && (board[tempRow][tempCol][0] === 0 || board[tempRow][tempCol][0] === 2)) {
+          validSpots.push([tempRow, tempCol]);
+        } else if (team === "2" && (board[tempRow][tempCol][0] === 0 || board[tempRow][tempCol][0] === 1)) {
           validSpots.push([tempRow, tempCol]);
         }
       }
@@ -187,7 +201,9 @@ function validMoves(piece, team, row, col) {
       let tempRow = row + dr[0];
       let tempCol = col + dr[1];
       if (tempRow <= 7 && tempRow >= 0 && tempCol <= 7 && tempCol >= 0) {
-        if (board[tempRow][tempCol][0] === 0 || board[tempRow][tempCol][0] === 2) {
+        if (team === "1" && (board[tempRow][tempCol][0] === 0 || board[tempRow][tempCol][0] === 2)) {
+          validSpots.push([tempRow, tempCol]);
+        } else if (team === "2" && (board[tempRow][tempCol][0] === 0 || board[tempRow][tempCol][0] === 1)) {
           validSpots.push([tempRow, tempCol]);
         }
       }
