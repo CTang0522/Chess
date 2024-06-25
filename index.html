@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Chess</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+
+
+        <div id="chessBoard">
+            <table class="board">
+                <tr>
+                    <th scope="row"></th>
+                    <th>Col 0</th>
+                    <th>Col 1</th>
+                    <th>Col 2</th>
+                    <th>Col 3</th>
+                    <th>Col 4</th>
+                    <th>Col 5</th>
+                    <th>Col 6</th>
+                    <th>Col 7</th>
+                </tr>
+                <tr id="row0">
+                    <th scope="row">Row 0</th>
+                    <td class="blackSpace" id="00" onclick="clickPiece('00')"></td>
+                    <td class="whiteSpace" id="01" onclick="clickPiece('01')"></td>
+                    <td class="blackSpace" id="02" onclick="clickPiece('02')"></td>
+                    <td class="whiteSpace" id="03" onclick="clickPiece('03')"></td>
+                    <td class="blackSpace" id="04" onclick="clickPiece('04')"></td>
+                    <td class="whiteSpace" id="05" onclick="clickPiece('05')"></td>
+                    <td class="blackSpace" id="06" onclick="clickPiece('06')"></td>
+                    <td class="whiteSpace" id="07" onclick="clickPiece('07')"></td>
+                </tr>
+                <tr id="row1">
+                    <th scope="row">Row 1</th>
+                    <td class="whiteSpace" id="10" onclick="clickPiece('10')"></td>
+                    <td class="blackSpace" id="11" onclick="clickPiece('11')"></td>
+                    <td class="whiteSpace" id="12" onclick="clickPiece('12')"></td>
+                    <td class="blackSpace" id="13" onclick="clickPiece('13')"></td>
+                    <td class="whiteSpace" id="14" onclick="clickPiece('14')"></td>
+                    <td class="blackSpace" id="15" onclick="clickPiece('15')"></td>
+                    <td class="whiteSpace" id="16" onclick="clickPiece('16')"></td>
+                    <td class="blackSpace" id="17" onclick="clickPiece('17')"></td>
+                </tr>
+                <tr id="row2">
+                    <th scope="row">Row 2</th>
+                    <td class="blackSpace" id="20" onclick="clickPiece('20')"></td>
+                    <td class="whiteSpace" id="21" onclick="clickPiece('21')"></td>
+                    <td class="blackSpace" id="22" onclick="clickPiece('22')"></td>
+                    <td class="whiteSpace" id="23" onclick="clickPiece('23')"></td>
+                    <td class="blackSpace" id="24" onclick="clickPiece('24')"></td>
+                    <td class="whiteSpace" id="25" onclick="clickPiece('25')"></td>
+                    <td class="blackSpace" id="26" onclick="clickPiece('26')"></td>
+                    <td class="whiteSpace" id="27" onclick="clickPiece('27')"></td>
+                </tr>
+                <tr id="row3">
+                    <th scope="row">Row 3</th>
+                    <td class="whiteSpace" id="30" onclick="clickPiece('30')"></td>
+                    <td class="blackSpace" id="31" onclick="clickPiece('31')"></td>
+                    <td class="whiteSpace" id="32" onclick="clickPiece('32')"></td>
+                    <td class="blackSpace" id="33" onclick="clickPiece('33')"></td>
+                    <td class="whiteSpace" id="34" onclick="clickPiece('34')"></td>
+                    <td class="blackSpace" id="35" onclick="clickPiece('35')"></td>
+                    <td class="whiteSpace" id="36" onclick="clickPiece('36')"></td>
+                    <td class="blackSpace" id="37" onclick="clickPiece('37')"></td>
+                </tr>
+                <tr id="row4">
+                    <th scope="row">Row 4</th>
+                    <td class="blackSpace" id="40" onclick="clickPiece('40')"></td>
+                    <td class="whiteSpace" id="41" onclick="clickPiece('41')"></td>
+                    <td class="blackSpace" id="42" onclick="clickPiece('42')"></td>
+                    <td class="whiteSpace" id="43" onclick="clickPiece('43')"></td>
+                    <td class="blackSpace" id="44" onclick="clickPiece('44')"></td>
+                    <td class="whiteSpace" id="45" onclick="clickPiece('45')"></td>
+                    <td class="blackSpace" id="46" onclick="clickPiece('46')"></td>
+                    <td class="whiteSpace" id="47" onclick="clickPiece('47')"></td>
+                </tr>
+                <tr id="row5">
+                    <th scope="row">Row 5</th>
+                    <td class="whiteSpace" id="50" onclick="clickPiece('50')"></td>
+                    <td class="blackSpace" id="51" onclick="clickPiece('51')"></td>
+                    <td class="whiteSpace" id="52" onclick="clickPiece('52')"></td>
+                    <td class="blackSpace" id="53" onclick="clickPiece('53')"></td>
+                    <td class="whiteSpace" id="54" onclick="clickPiece('54')"></td>
+                    <td class="blackSpace" id="55" onclick="clickPiece('55')"></td>
+                    <td class="whiteSpace" id="56" onclick="clickPiece('56')"></td>
+                    <td class="blackSpace" id="57" onclick="clickPiece('57')"></td>
+                </tr>
+                <tr id="row6">
+                    <th scope="row">Row 6</th>
+                    <td class="blackSpace" id="60" onclick="clickPiece('60')"></td>
+                    <td class="whiteSpace" id="61" onclick="clickPiece('61')"></td>
+                    <td class="blackSpace" id="62" onclick="clickPiece('62')"></td>
+                    <td class="whiteSpace" id="63" onclick="clickPiece('63')"></td>
+                    <td class="blackSpace" id="64" onclick="clickPiece('64')"></td>
+                    <td class="whiteSpace" id="65" onclick="clickPiece('65')"></td>
+                    <td class="blackSpace" id="66" onclick="clickPiece('66')"></td>
+                    <td class="whiteSpace" id="67" onclick="clickPiece('67')"></td>
+                </tr>
+                <tr id="row7">
+                    <th scope="row">Row 7</th>
+                    <td class="whiteSpace" id="70" onclick="clickPiece('70')"></td>
+                    <td class="blackSpace" id="71" onclick="clickPiece('71')"></td>
+                    <td class="whiteSpace" id="72" onclick="clickPiece('72')"></td>
+                    <td class="blackSpace" id="73" onclick="clickPiece('73')"></td>
+                    <td class="whiteSpace" id="74" onclick="clickPiece('74')"></td>
+                    <td class="blackSpace" id="75" onclick="clickPiece('75')"></td>
+                    <td class="whiteSpace" id="76" onclick="clickPiece('76')"></td>
+                    <td class="blackSpace" id="77" onclick="clickPiece('77')"></td>
+                </tr>
+            </table>
+        </div>
+
+        
+
+        <br><br>
+
+        <div id="controls">
+            <button id="startGame" onclick="startGame()">Start Game</button>
+
+            <h1 id="instructionsHeader">Instructions: </h1>
+            <h2 id="instructions">Press Start Game</h2>
+
+            <div id="inputs">
+                <h3>Select Piece</h3>
+                <label for="row">Row: </label>
+                <input class="numberInput" type="number" max="7" min="0" id="row" onchange="checkLegalPiece()">
+
+                <label for="col">Column: </label>
+                <input class="numberInput" type="number" max="7" min="0" id="col"onchange="checkLegalPiece()"> 
+
+                <h3>Piece Destination</h3>
+                <label for="row">Row: </label>
+                <input class="numberInput" type="number" max="7" min="0" id="rowMove">
+
+                <label for="col">Column: </label>
+                <input class="numberInput" type="number" max="7" min="0" id="colMove"> 
+
+                <button id="submit" onclick="makeMove()">Submit</button>
+            </div><br>
+
+            <div id="promotionSelections">
+                
+            </div>
+        </div>
+        <script src="chessGameLogic.js"></script>
+
+    </body>
+
+</html>
